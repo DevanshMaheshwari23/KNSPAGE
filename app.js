@@ -28,7 +28,9 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const port = 5500;
+
+// Set the port
+const port = process.env.PORT || 5500;  // Vercel sets PORT in the environment variables
 
 // Set the view engine to ejs
 app.set("view engine", "ejs");
@@ -37,7 +39,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 // Middleware to serve static files from the 'public' folder
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Route for the form page
 app.get("/form", (req, res) => {
