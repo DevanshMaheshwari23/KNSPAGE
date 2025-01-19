@@ -34,6 +34,7 @@ const port = process.env.PORT || 5500;  // Vercel sets PORT in the environment v
 
 // Set the view engine to ejs
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 // Middleware to parse URL-encoded data
 app.use(express.urlencoded({ extended: true }));
