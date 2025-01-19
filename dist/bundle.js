@@ -83293,6 +83293,7 @@ var __webpack_exports__ = {};
 /*!****************!*\
   !*** ./app.js ***!
   \****************/
+var __dirname = "/";
 var express = __webpack_require__(/*! express */ "./node_modules/express/index.js");
 var app = express();
 var path = __webpack_require__(/*! path */ "./node_modules/path-browserify/index.js");
@@ -83309,7 +83310,9 @@ app.get("/thankyou", function (req, res) {
   res.render("thankyou.ejs");
 });
 app.get("/", function (req, res) {
-  res.sendFile("index.html");
+  res.sendFile("index.html"), {
+    root: __dirname
+  };
 });
 // ,{root:__dirname}
 
