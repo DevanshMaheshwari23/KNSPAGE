@@ -39,7 +39,7 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 
 // Middleware to serve static files from the 'public' folder
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Route for the form page
 app.get("/form", (req, res) => {
