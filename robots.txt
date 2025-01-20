@@ -1,2 +1,2 @@
 User-agent: Googlebot
-Allow: /sitemap.xml
+Allow: /sitemaps-4468611/sitemap.xml
